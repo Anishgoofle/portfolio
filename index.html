@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,800|Source+Sans+Pro:300,800&display=swap"
         rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="logo">
+        <!-- <div class="logo">
             <img src="assets/Anish.jpg" alt="dev-image">
-        </div>
+        </div> -->
 
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -38,27 +40,30 @@
         <h1 class="section__title section__title--intro">
             Hi, I am <strong>Anish Ojha</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">Web Developer</p>
-        <img src="assets/Anish.jpg" alt="My-image">
+        <p class="section__subtitle section__subtitle--intro">A <span class="txt-type" data-wait="3000"
+                data-words='["Web Developer", "Tech Enthusiast", "Problem Solver", "JavaScript addict &hearts;"]'></span>
+        </p>
+        <img src="assets/Anish.jpg" alt="My-image" class="intro__img">
     </section>
+
+
+
 
     <!-- About me -->
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">About Me</h2>
-        <p class="section__subtitle section__subtitle--about">
-            Professionally connected with the web development industry and information technology for 2 years.
-        </p>
-
-        <p class="section__subtitle section__subtitle--about">
-            Interested in the entire frontend spectrum and working on ambitious projects with positive people.
-        </p>
+        <p class="section__subtitle section__subtitle--about"></p>
 
         <div class="about-me__body">
-            <p></p>
-            <p></p>
+            <p>Hi, I’m Anish, a Software engineer at Matchmove Pay. Passionate about creating beautiful, intuitive UI
+                for our top-tier clients. Demonstrated history of working in the information technology and services
+                industry. Skilled in ReactJS, Angular, Web development, Web Design, TypeScript, JavaScript, DOM
+                manipulation etc.</p>
+            <p>Looking for more experiences to learn more about career paths and ways to
+                grow into the role of a Front-End/Full-Stack Developer in the next few years.</p>
         </div>
 
-
+        <img src="/assets/Anish.jpg" alt="Jane leaning against a bus" class="about-me__img">
     </section>
 
     <!-- My Skills -->
@@ -100,6 +105,7 @@
             <li class="social-list__item"><a class="social-list__link" href="https://github.com" d>b</a></li>
         </ul>
     </footer>
+    <script defer src="main.js"></script>
 </body>
 
 </html>
