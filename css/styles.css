@@ -13,7 +13,7 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #fff;
+  --clr-light: whitesmoke;
   --clr-dark: #303030;
   --clr-accent: #08fdd8;
 
@@ -212,9 +212,9 @@ nav {
   height: 0;
   top: 50px;
   left: 20px;
-  border-left: 78px solid transparent;
-  border-right: 78px solid transparent;
-  border-bottom: 156px solid #ccc;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 160px solid #ccc;
   transform-origin: 50% 0%;
   animation: spin 8s infinite linear;
 }
@@ -235,36 +235,62 @@ nav {
   0% {
     transform: rotateY(0deg) rotateX(30deg);
     border-bottom-color: #21fddc;
+    opacity: 0.8;
   }
   25% {
     transform: rotateY(90deg) rotateX(30deg);
     border-bottom-color: #02eac7;
-    opacity: 1;
+    opacity: 0.8;
   }
   25.1% {
-    opacity: 0;
+    opacity: 0.8;
   }
   50% {
     transform: rotateY(180deg) rotateX(30deg);
     border-bottom-color: #02c6a9;
   }
   74.9% {
-    opacity: 0;
+    opacity: 0.8;
   }
   75% {
     transform: rotateY(270deg) rotateX(30deg);
     border-bottom-color: #01b79c;
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
     transform: rotateY(360deg) rotateX(30deg);
     border-bottom-color: #21fddc;
+    opacity: 0.8;
   }
 }
 
-/* .about-me__img {
-  box-shadow: var(--bs);
-} */
+.pyramid > div:nth-child(1)::after {
+  position: absolute;
+  content: url(/assets/html.png);
+  left: -25px;
+  top: 70px;
+}
+
+.pyramid > div:nth-child(2)::after {
+  position: absolute;
+  content: url(/assets/css.png);
+  left: -25px;
+  top: 70px;
+}
+
+.pyramid > div:nth-child(3)::after {
+  position: absolute;
+  content: url(/assets/js.png);
+  left: -25px;
+  top: 70px;
+}
+
+.pyramid > div:nth-child(4)::after {
+  position: absolute;
+  content: url(/assets/jsframeworks.png);
+  left: -55px;
+  top: 70px;
+}
 
 @media (min-width: 600px) {
   .about-me {
@@ -299,11 +325,4 @@ nav {
     padding-right: calc(200px + 4em);
     grid-area: subtitle;
   }
-
-  /* .about-me__img {
-    grid-area: img;
-    position: relative;
-    z-index: 2;
-    padding-top: 6em;
-  } */
 }
