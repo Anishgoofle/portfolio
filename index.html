@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnishOjha Portfolio</title>
+    <title>Anish Ojha</title>
+    <link rel="icon" href="/assets/devicon2.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
@@ -18,21 +20,23 @@
 
 <body>
     <header>
-        <!-- <div class="logo">
-            <img src="assets/Anish.jpg" alt="dev-image">
-        </div> -->
+        <div class="logo">
+            <img src="assets/devicon2.png" alt="dev-image">
+        </div>
 
-        <button class="nav-toggle" aria-label="toggle navigation">
+        <!-- <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
-        </button>
-        <nav class="nav">
+        </button> -->
+        <nav class="navbar">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                <li class="nav__item"><a href="#skills" class="nav__link">My Skills</a></li>
-                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
             </ul>
         </nav>
+
+
     </header>
 
     <!-- Introduction -->
@@ -41,7 +45,7 @@
             Hi, I am <strong>Anish Ojha</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">A <span class="txt-type" data-wait="3000"
-                data-words='["Web Developer", "Tech Enthusiast", "Problem Solver", "JavaScript addict &hearts;"]'></span>
+                data-words='["Web Developer", "Technology Enthusiast", "Problem Solver", "JavaScript addict &hearts;"]'></span>
         </p>
         <img src="assets/Anish.jpg" alt="My-image" class="intro__img">
     </section>
@@ -56,9 +60,9 @@
 
         <div class="about-me__body">
             <p>Hi, I’m Anish, a Software engineer at Matchmove Pay. I have around 2 years of professional web
-                developement experience. Passionate about creating beautiful, intuitive UI
-                for our top-tier clients. Demonstrated history of working in the information technology and services
-                industry. Skilled in ReactJS, Angular, Web development, Web Design, TypeScript, JavaScript, DOM
+                developement experience. I'm passionate about creating beautiful, intuitive UI and have demonstrated
+                history of working in the information technology and services
+                industry. I'm skilled in ReactJS, Angular, Web development, Web Design, TypeScript, JavaScript, DOM
                 manipulation etc.</p>
             <p>Looking for experiences to learn more about career paths and ways to
                 grow into the role of a Front-End/Full-Stack Developer in the next few years.</p>
@@ -75,9 +79,9 @@
     <!-- My Skills -->
 
     <!--My Work -->
-    <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">My work</h2>
-        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+    <section class="my-work" id="projects">
+        <h2 class="section__title section__title--work">My Projects</h2>
+        <p class="section__subtitle section__subtitle--work">A selection from my range of work</p>
 
         <div class="portfolio">
             <!-- Portfolio item 01 -->
@@ -100,17 +104,33 @@
                 <img src="/assets/game.png" alt="" class="portfolio__img">
             </div>
         </div>
+        <small>Many more coming soon...</small>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <!-- replace with your own email address -->
-        <a href="mailto:anishojha82@gmail.com" class="footer__link">anishojha82@gmail.com</a>
+    <footer class="footer">
+        <p class="color-primary footer__msg">If you've reached till here, I would love to connect with you !</p>
         <ul class="social-list">
-            <li class="social-list__item"><a class="social-list__link" href="https://linkedin.com">a</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="https://github.com" d>b</a></li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="mailto:anishojha82@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://linkedin.com/in/anish-ojha" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/Anishgoofle" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
         </ul>
+
     </footer>
+
+
     <script defer src="main.js"></script>
 </body>
 

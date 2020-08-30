@@ -64,3 +64,6 @@ function init() {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
 }
+
+
+// const navToggle = ()
