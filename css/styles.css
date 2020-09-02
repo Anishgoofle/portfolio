@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 
 /* Custom Properties, update these for your own design */
@@ -50,6 +51,15 @@ body {
   line-height: 1.6;
 }
 
+body:not(.user-is-tabbing):focus {
+  outline: none;
+}
+
+body.user-is-tabbing *:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
 section {
   padding: 4em 2em;
 }
@@ -61,11 +71,6 @@ img {
 
 strong {
   font-weight: var(--fw-bold);
-}
-
-:focus {
-  outline: 3px solid var(--clr-accent);
-  outline-offset: 3px;
 }
 
 /* Buttons */
@@ -147,12 +152,13 @@ h3 {
 header {
   display: flex;
   padding: 0em 1em;
-  background-color: #303030;
+  background-color: #444;
   position: sticky;
   top: 0;
   z-index: 1000;
   justify-content: space-between;
   align-items: center;
+  height: 65px;
 }
 
 .logo {
@@ -161,29 +167,53 @@ header {
   align-items: center;
 }
 
-.navbar {
-  overflow: hidden;
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.navbar li {
-  display: inline;
+.nav li {
+  display: flex;
+  float: left;
+  height: 65px;
+  width: 120px; /*new*/
+  text-align: center; /*new*/
+  align-items: center;
+  justify-content: center;
 }
-.nav__link {
-  color: white;
-  font-weight: var(--fw-bold);
+
+.nav li a {
+  color: #eee;
   font-size: var(--fs-h3);
   text-decoration: none;
-  padding: 0 1em;
-  text-align: center;
+  display: block;
+  padding: 15px;
 }
 
-.nav__link:hover,
-.active {
-  color: var(--clr-accent);
+.nav li span {
+  padding: 15px 0;
+  display: none;
 }
+.nav a:hover {
+  color: #fff;
+}
+.nav a:hover > i {
+  display: none;
+}
+.nav a:hover > span {
+  display: block;
+}
+
+/* .nav {
+  overflow: hidden;
+} */
 
 @media (max-width: 800px) {
-  .navbar {
+  .nav {
     display: none;
   }
 }
@@ -243,20 +273,7 @@ header {
     grid-column-gap: 1em;
     margin-top: 1em;
   }
-} /* .navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-} */
-
-/* .navbar ul {
-  margin: 8px 0 0 0;
-  list-style: none;
-} */
+}
 
 /*  About me section  */
 

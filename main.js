@@ -1,3 +1,5 @@
+var oldTarget = ''
+
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
         this.txtElement = txtElement;
@@ -64,6 +66,16 @@ function init() {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
 }
+
+
+function handleFirstTab(e) {
+    if (e.keyCode === 9) {
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+    }
+}
+
+window.addEventListener('keydown', handleFirstTab);
 
 
 // const navToggle = ()
