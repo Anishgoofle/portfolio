@@ -65,6 +65,15 @@ function init() {
     const wait = txtElement.getAttribute('data-wait');
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
+    setStars();
+}
+
+
+function setStars() {
+    const devContainer = document.querySelector('.dev__univ');
+    for (var i = 0; i < 40; i++) {
+        devContainer.innerHTML += "<div class='star'></div>";
+    }
 }
 
 
