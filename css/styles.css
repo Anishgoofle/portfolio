@@ -25,6 +25,9 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
+  /*Optional Dark Mode*/
+  /* filter: invert(1) hue-rotate(180deg); */
 }
 
 @media (min-width: 800px) {
@@ -466,7 +469,6 @@ header {
   -o-transition: all 0.09s ease-in;
   transition: all 0.09s ease-in;
   overflow: hidden;
-  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -475,7 +477,7 @@ header {
 
 .star {
   animation-name: flicker;
-  animation-timing-function: ease(in-out-circ);
+  animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   background: #fff;
@@ -856,6 +858,129 @@ header {
   top: 34vh;
   height: 0.15rem;
   width: 0.15rem;
+}
+
+.dev__skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  bottom: -100px;
+}
+
+.dev__univ a {
+  text-decoration: none;
+}
+
+.dev__skills a span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill__title {
+  color: var(--clr-light);
+  font-size: var(--fs-h3);
+  text-align: center;
+}
+
+.dev__skills a:nth-child(1) {
+  animation-delay: 2s;
+}
+.dev__skills a:nth-child(2) {
+  animation-delay: 1s;
+}
+.dev__skills a:nth-child(3) {
+  animation-delay: 3s;
+}
+.dev__skills a:nth-child(4) {
+  animation-delay: 4.5s;
+}
+.dev__skills a:nth-child(5) {
+  animation-delay: 6s;
+}
+.dev__skills a:nth-child(6) {
+  animation-delay: 2.5s;
+}
+.dev__skills a:nth-child(7) {
+  animation-delay: 4s;
+}
+.dev__skills a:nth-child(8) {
+  animation-delay: 1s;
+}
+.dev__skills a:nth-child(9) {
+  animation-delay: 6;
+}
+.dev__skills a:nth-child(10) {
+  animation-delay: 4s;
+}
+.dev__skills a:nth-child(11) {
+  animation-delay: 8s;
+}
+.dev__skills a:nth-child(12) {
+  animation-delay: 2s;
+}
+
+@media (max-width: 850px) {
+  .dev__skills {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .dev__skills a span {
+    flex-direction: row;
+    padding: 0.5em 0.5em;
+  }
+
+  .dev__skills > a {
+    animation: launch-res 7s linear 0s infinite !important;
+  }
+
+  @keyframes launch-res {
+    0% {
+      transform: translateY(80vh);
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-80vh);
+      opacity: 1;
+    }
+  }
+}
+/* Animations*/
+
+.dev__skills a {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: launch;
+  animation-duration: 7s;
+}
+
+.dev__skills a:hover {
+  animation-play-state: paused;
+}
+
+@keyframes launch {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-90vh);
+    opacity: 0;
+  }
 }
 
 /* footer */
