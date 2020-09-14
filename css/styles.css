@@ -863,10 +863,30 @@ header {
 .dev__skills {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   bottom: -100px;
+}
+
+.dev__univ .rocket {
+  animation: animate 0.2s ease infinite;
+  position: absolute;
+  left: 50%;
+  bottom: 20em;
+}
+
+.dev__univ .rocket::before {
+  content: "";
+  background: linear-gradient(#00ddff, transparent);
+  width: 20px;
+  height: 200px;
+  bottom: -199px;
+  position: absolute;
+}
+
+.dev__univ .rocket img {
+  padding-left: 1em;
 }
 
 .dev__univ a {
@@ -895,13 +915,13 @@ header {
   animation-delay: 3s;
 }
 .dev__skills a:nth-child(4) {
-  animation-delay: 4.5s;
+  animation-delay: 4s;
 }
 .dev__skills a:nth-child(5) {
-  animation-delay: 6s;
+  animation-delay: 2s;
 }
 .dev__skills a:nth-child(6) {
-  animation-delay: 2.5s;
+  animation-delay: 5s;
 }
 .dev__skills a:nth-child(7) {
   animation-delay: 4s;
@@ -913,10 +933,10 @@ header {
   animation-delay: 6;
 }
 .dev__skills a:nth-child(10) {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 .dev__skills a:nth-child(11) {
-  animation-delay: 8s;
+  animation-delay: 5s;
 }
 .dev__skills a:nth-child(12) {
   animation-delay: 2s;
@@ -930,7 +950,7 @@ header {
 
   .dev__skills a span {
     flex-direction: row;
-    padding: 0.5em 0.5em;
+    padding: 0.5em 1em;
   }
 
   .dev__skills > a {
@@ -940,10 +960,10 @@ header {
   @keyframes launch-res {
     0% {
       transform: translateY(80vh);
-      opacity: 0;
+      opacity: 1;
     }
 
-    25% {
+    10% {
       opacity: 1;
     }
 
@@ -952,8 +972,21 @@ header {
       opacity: 1;
     }
   }
+
+  .dev__skills .rocket {
+    display: none;
+  }
 }
 /* Animations*/
+
+@keyframes animate {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
 
 .dev__skills a {
   animation-iteration-count: infinite;
@@ -968,7 +1001,7 @@ header {
 
 @keyframes launch {
   0% {
-    transform: translateY(0);
+    transform: translateY(-90vh);
     opacity: 0;
   }
   50% {
@@ -978,7 +1011,7 @@ header {
     opacity: 1;
   }
   100% {
-    transform: translateY(-90vh);
+    transform: translateY(0);
     opacity: 0;
   }
 }
