@@ -51,7 +51,7 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 body:not(.user-is-tabbing):focus {
@@ -90,6 +90,7 @@ strong {
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
+  border-radius: 5px;
 }
 
 .btn:hover {
@@ -434,23 +435,61 @@ header {
   overflow: hidden;
   cursor: pointer;
   border-radius: 5px;
+  position: relative;
 }
 
 .portfolio__img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  /* transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear; */
   width: 100%;
   height: 100%;
 }
 
-.portfolio__item:focus {
-  position: relative;
+.portfolio__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--clr-dark);
+  padding: 0 0.5em;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  background: var(--clr-accent);
+  transition: all 0.3s cubic-bezier(0.5, 0, 0.5, 1);
   z-index: 2;
+  height: 40px;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-  transform: scale(1.2);
-  opacity: 0.5;
+.portfolio__item:hover .portfolio__info {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.portfolio__info .portfolio__header {
+  font-size: var(--fs-h3);
+  padding: 0.3em 0;
+  font-weight: 600;
+}
+
+.portfolio__content {
+  text-align: justify;
+  padding: 1em 0;
+}
+
+.portfolio__links {
+  padding: 0.5em 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio__link {
+  text-decoration: none;
+  font-size: 32px;
 }
 
 /* skills */
@@ -872,21 +911,22 @@ header {
 .dev__univ .rocket {
   animation: animate 0.2s ease infinite;
   position: absolute;
-  left: 50%;
+  left: 48%;
   bottom: 20em;
 }
 
 .dev__univ .rocket::before {
   content: "";
   background: linear-gradient(#00ddff, transparent);
-  width: 20px;
+  width: 10px;
   height: 200px;
   bottom: -199px;
   position: absolute;
+  filter: blur(5px);
 }
 
 .dev__univ .rocket img {
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 
 .dev__univ a {
