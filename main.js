@@ -86,5 +86,11 @@ function handleFirstTab(e) {
 
 window.addEventListener('keydown', handleFirstTab);
 
+const navToggle = document.getElementsByClassName('nav-toggle')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-// const navToggle = ()
+navToggle.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+});
+
+
