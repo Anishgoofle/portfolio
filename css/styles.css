@@ -1032,7 +1032,7 @@ header {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: launch;
-  animation-duration: 7s;
+  animation-duration: 4s;
 }
 
 .dev__skills a:hover {
