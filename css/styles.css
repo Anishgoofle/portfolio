@@ -63,8 +63,14 @@ body.user-is-tabbing *:focus {
   outline-offset: 3px;
 }
 
-section {
+.intro,
+.about-me,
+.my-skills {
   padding: 4em 2em;
+}
+
+.my-work {
+  padding: 4em 0;
 }
 
 img {
@@ -462,9 +468,11 @@ h3 {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   /* grid-template-columns: repeat(2, 1fr); */
-  gap: 20px;
+  grid-template-rows: auto;
+  gap: 40px;
+  margin: 2em;
 }
 
 .portfolio__item {
@@ -473,6 +481,8 @@ h3 {
   cursor: pointer;
   border-radius: 5px;
   position: relative;
+  display: flex;
+  height: 350px;
 }
 
 .portfolio__img {
